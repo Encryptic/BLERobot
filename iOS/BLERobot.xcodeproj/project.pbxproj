@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		831D86A616860E7C00EB8FB7 /* BLEConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831D86A416860E7C00EB8FB7 /* BLEConnectViewController.m */; };
+		83847FCF16860AAB005C1F48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83847FCE16860AAB005C1F48 /* UIKit.framework */; };
+		83847FD116860AAB005C1F48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83847FD016860AAB005C1F48 /* Foundation.framework */; };
+		83847FD316860AAB005C1F48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83847FD216860AAB005C1F48 /* CoreGraphics.framework */; };
+		83847FD916860AAB005C1F48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83847FD716860AAB005C1F48 /* InfoPlist.strings */; };
+		83847FDB16860AAB005C1F48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83847FDA16860AAB005C1F48 /* main.m */; };
+		83847FDF16860AAB005C1F48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83847FDE16860AAB005C1F48 /* AppDelegate.m */; };
+		83847FE116860AAC005C1F48 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83847FE016860AAC005C1F48 /* Default.png */; };
+		83847FE316860AAC005C1F48 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83847FE216860AAC005C1F48 /* Default@2x.png */; };
+		83847FE516860AAC005C1F48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83847FE416860AAC005C1F48 /* Default-568h@2x.png */; };
+		83847FE816860AAC005C1F48 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83847FE616860AAC005C1F48 /* MainStoryboard_iPhone.storyboard */; };
+		83847FEB16860AAC005C1F48 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83847FE916860AAC005C1F48 /* MainStoryboard_iPad.storyboard */; };
+		83847FEE16860AAC005C1F48 /* RobotControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83847FED16860AAC005C1F48 /* RobotControlViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		831D86A316860E7C00EB8FB7 /* BLEConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEConnectViewController.h; sourceTree = "<group>"; };
+		831D86A416860E7C00EB8FB7 /* BLEConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEConnectViewController.m; sourceTree = "<group>"; };
+		83847FCA16860AAB005C1F48 /* BLERobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLERobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83847FCE16860AAB005C1F48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		83847FD016860AAB005C1F48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83847FD216860AAB005C1F48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		83847FD616860AAB005C1F48 /* BLERobot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLERobot-Info.plist"; sourceTree = "<group>"; };
+		83847FD816860AAB005C1F48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83847FDA16860AAB005C1F48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83847FDC16860AAB005C1F48 /* BLERobot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLERobot-Prefix.pch"; sourceTree = "<group>"; };
+		83847FDD16860AAB005C1F48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83847FDE16860AAB005C1F48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83847FE016860AAC005C1F48 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		83847FE216860AAC005C1F48 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		83847FE416860AAC005C1F48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		83847FE716860AAC005C1F48 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		83847FEA16860AAC005C1F48 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		83847FEC16860AAC005C1F48 /* RobotControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RobotControlViewController.h; sourceTree = "<group>"; };
+		83847FED16860AAC005C1F48 /* RobotControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RobotControlViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83847FC716860AAB005C1F48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83847FCF16860AAB005C1F48 /* UIKit.framework in Frameworks */,
+				83847FD116860AAB005C1F48 /* Foundation.framework in Frameworks */,
+				83847FD316860AAB005C1F48 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83847FBF16860AAB005C1F48 = {
+			isa = PBXGroup;
+			children = (
+				83847FD416860AAB005C1F48 /* BLERobot */,
+				83847FCD16860AAB005C1F48 /* Frameworks */,
+				83847FCB16860AAB005C1F48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83847FCB16860AAB005C1F48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83847FCA16860AAB005C1F48 /* BLERobot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83847FCD16860AAB005C1F48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83847FCE16860AAB005C1F48 /* UIKit.framework */,
+				83847FD016860AAB005C1F48 /* Foundation.framework */,
+				83847FD216860AAB005C1F48 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83847FD416860AAB005C1F48 /* BLERobot */ = {
+			isa = PBXGroup;
+			children = (
+				83847FDD16860AAB005C1F48 /* AppDelegate.h */,
+				83847FDE16860AAB005C1F48 /* AppDelegate.m */,
+				83847FE616860AAC005C1F48 /* MainStoryboard_iPhone.storyboard */,
+				831D86A316860E7C00EB8FB7 /* BLEConnectViewController.h */,
+				831D86A416860E7C00EB8FB7 /* BLEConnectViewController.m */,
+				83847FE916860AAC005C1F48 /* MainStoryboard_iPad.storyboard */,
+				83847FEC16860AAC005C1F48 /* RobotControlViewController.h */,
+				83847FED16860AAC005C1F48 /* RobotControlViewController.m */,
+				83847FD516860AAB005C1F48 /* Supporting Files */,
+			);
+			path = BLERobot;
+			sourceTree = "<group>";
+		};
+		83847FD516860AAB005C1F48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83847FD616860AAB005C1F48 /* BLERobot-Info.plist */,
+				83847FD716860AAB005C1F48 /* InfoPlist.strings */,
+				83847FDA16860AAB005C1F48 /* main.m */,
+				83847FDC16860AAB005C1F48 /* BLERobot-Prefix.pch */,
+				83847FE016860AAC005C1F48 /* Default.png */,
+				83847FE216860AAC005C1F48 /* Default@2x.png */,
+				83847FE416860AAC005C1F48 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83847FC916860AAB005C1F48 /* BLERobot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83847FF116860AAC005C1F48 /* Build configuration list for PBXNativeTarget "BLERobot" */;
+			buildPhases = (
+				83847FC616860AAB005C1F48 /* Sources */,
+				83847FC716860AAB005C1F48 /* Frameworks */,
+				83847FC816860AAB005C1F48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLERobot;
+			productName = BLERobot;
+			productReference = 83847FCA16860AAB005C1F48 /* BLERobot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83847FC116860AAB005C1F48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Christopher Theberge";
+			};
+			buildConfigurationList = 83847FC416860AAB005C1F48 /* Build configuration list for PBXProject "BLERobot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 83847FBF16860AAB005C1F48;
+			productRefGroup = 83847FCB16860AAB005C1F48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83847FC916860AAB005C1F48 /* BLERobot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83847FC816860AAB005C1F48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83847FD916860AAB005C1F48 /* InfoPlist.strings in Resources */,
+				83847FE116860AAC005C1F48 /* Default.png in Resources */,
+				83847FE316860AAC005C1F48 /* Default@2x.png in Resources */,
+				83847FE516860AAC005C1F48 /* Default-568h@2x.png in Resources */,
+				83847FE816860AAC005C1F48 /* MainStoryboard_iPhone.storyboard in Resources */,
+				83847FEB16860AAC005C1F48 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83847FC616860AAB005C1F48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83847FDB16860AAB005C1F48 /* main.m in Sources */,
+				83847FDF16860AAB005C1F48 /* AppDelegate.m in Sources */,
+				83847FEE16860AAC005C1F48 /* RobotControlViewController.m in Sources */,
+				831D86A616860E7C00EB8FB7 /* BLEConnectViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83847FD716860AAB005C1F48 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83847FD816860AAB005C1F48 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		83847FE616860AAC005C1F48 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83847FE716860AAC005C1F48 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		83847FE916860AAC005C1F48 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83847FEA16860AAC005C1F48 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83847FEF16860AAC005C1F48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83847FF016860AAC005C1F48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83847FF216860AAC005C1F48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLERobot/BLERobot-Prefix.pch";
+				INFOPLIST_FILE = "BLERobot/BLERobot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		83847FF316860AAC005C1F48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLERobot/BLERobot-Prefix.pch";
+				INFOPLIST_FILE = "BLERobot/BLERobot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83847FC416860AAB005C1F48 /* Build configuration list for PBXProject "BLERobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83847FEF16860AAC005C1F48 /* Debug */,
+				83847FF016860AAC005C1F48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83847FF116860AAC005C1F48 /* Build configuration list for PBXNativeTarget "BLERobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83847FF216860AAC005C1F48 /* Debug */,
+				83847FF316860AAC005C1F48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83847FC116860AAB005C1F48 /* Project object */;
+}
