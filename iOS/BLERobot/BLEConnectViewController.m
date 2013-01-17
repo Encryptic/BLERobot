@@ -14,6 +14,8 @@
 
 @implementation BLEConnectViewController
 
+@synthesize bluetoothConnection, statusLabel, statusSpinner, connectedDeviceList;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +29,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    bluetoothConnection = [[BLE alloc] init];
+    [bluetoothConnection controlSetup:1];
+    bluetoothConnection.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,8 +40,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)connectPressed:(id)sender {
-    [self performSegueWithIdentifier:@"connected" sender:self];
+- (IBAction)scanPressed:(id)sender {
+    [statusSpinner startAnimating];
+    [bluetoothConnection findBLEPeripherals:1];
+    
+    //[self performSegueWithIdentifier:@"connected" sender:self];
+    
+    [NSTimer scheduledTimerWithTimeInterval:(float)2.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
+}
+
+-(void) connectionTimer:(NSTimer *)timer
+{
+    [connectedDeviceList reloadData];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[bluetoothConnection peripherals] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    
+    [[cell textLabel] setText:[[[bluetoothConnection peripherals] objectAtIndex:indexPath.item] name]];
+    
+    return cell;
 }
 
 @end

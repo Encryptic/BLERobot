@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		831D86A616860E7C00EB8FB7 /* BLEConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831D86A416860E7C00EB8FB7 /* BLEConnectViewController.m */; };
+		836ADF8F16863BF80080380D /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 836ADF8D16863BF80080380D /* BLE.m */; };
+		836ADF9116863C580080380D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836ADF9016863C580080380D /* CoreBluetooth.framework */; };
 		83847FCF16860AAB005C1F48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83847FCE16860AAB005C1F48 /* UIKit.framework */; };
 		83847FD116860AAB005C1F48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83847FD016860AAB005C1F48 /* Foundation.framework */; };
 		83847FD316860AAB005C1F48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83847FD216860AAB005C1F48 /* CoreGraphics.framework */; };
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		831D86A316860E7C00EB8FB7 /* BLEConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEConnectViewController.h; sourceTree = "<group>"; };
 		831D86A416860E7C00EB8FB7 /* BLEConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEConnectViewController.m; sourceTree = "<group>"; };
+		836ADF8C16863BF80080380D /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLE.h; path = ../BLE/BLE_Framework/BLE.h; sourceTree = "<group>"; };
+		836ADF8D16863BF80080380D /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLE.m; path = ../BLE/BLE_Framework/BLE.m; sourceTree = "<group>"; };
+		836ADF8E16863BF80080380D /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEDefines.h; path = ../BLE/BLE_Framework/BLEDefines.h; sourceTree = "<group>"; };
+		836ADF9016863C580080380D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		83847FCA16860AAB005C1F48 /* BLERobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLERobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83847FCE16860AAB005C1F48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83847FD016860AAB005C1F48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836ADF9116863C580080380D /* CoreBluetooth.framework in Frameworks */,
 				83847FCF16860AAB005C1F48 /* UIKit.framework in Frameworks */,
 				83847FD116860AAB005C1F48 /* Foundation.framework in Frameworks */,
 				83847FD316860AAB005C1F48 /* CoreGraphics.framework in Frameworks */,
@@ -58,9 +65,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		836ADF8A16863BE00080380D /* BLE_Framework */ = {
+			isa = PBXGroup;
+			children = (
+				836ADF8C16863BF80080380D /* BLE.h */,
+				836ADF8D16863BF80080380D /* BLE.m */,
+				836ADF8E16863BF80080380D /* BLEDefines.h */,
+			);
+			name = BLE_Framework;
+			sourceTree = "<group>";
+		};
 		83847FBF16860AAB005C1F48 = {
 			isa = PBXGroup;
 			children = (
+				836ADF8A16863BE00080380D /* BLE_Framework */,
 				83847FD416860AAB005C1F48 /* BLERobot */,
 				83847FCD16860AAB005C1F48 /* Frameworks */,
 				83847FCB16860AAB005C1F48 /* Products */,
@@ -78,6 +96,7 @@
 		83847FCD16860AAB005C1F48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				836ADF9016863C580080380D /* CoreBluetooth.framework */,
 				83847FCE16860AAB005C1F48 /* UIKit.framework */,
 				83847FD016860AAB005C1F48 /* Foundation.framework */,
 				83847FD216860AAB005C1F48 /* CoreGraphics.framework */,
@@ -186,6 +205,7 @@
 				83847FDF16860AAB005C1F48 /* AppDelegate.m in Sources */,
 				83847FEE16860AAC005C1F48 /* RobotControlViewController.m in Sources */,
 				831D86A616860E7C00EB8FB7 /* BLEConnectViewController.m in Sources */,
+				836ADF8F16863BF80080380D /* BLE.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

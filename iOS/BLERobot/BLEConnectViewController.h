@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BLE.h"
 
-@interface BLEConnectViewController : UIViewController
+@interface BLEConnectViewController : UIViewController <BLEDelegate, UITableViewDataSource>
 
-- (IBAction)connectPressed:(id)sender;
+// UI Outlets
+@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *statusSpinner;
+@property (strong, nonatomic) IBOutlet UITableView *connectedDeviceList;
 
+// Bluetooth Framework
+@property (strong, nonatomic) BLE *bluetoothConnection;
+
+- (IBAction)scanPressed:(id)sender;
 
 @end

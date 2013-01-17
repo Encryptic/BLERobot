@@ -18,7 +18,7 @@
                                     <constraint firstAttribute="height" constant="57" id="u0j-Yf-5iy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Connect">
+                                <state key="normal" title="Scan">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,18 +26,47 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="connectPressed:" destination="f7w-Be-bJN" eventType="touchUpInside" id="ZSv-3O-fdY"/>
+                                    <action selector="scanPressed:" destination="f7w-Be-bJN" eventType="touchUpInside" id="q3v-xv-oTA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Searching..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WZ-dF-l2D">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="253" id="tdh-Kr-cMC"/>
+                                    <constraint firstAttribute="height" constant="98" id="wAr-V1-wpO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AvH-10-qoP"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rbi-mm-rjT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="o4m-HC-Udl"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="f7w-Be-bJN" id="fjw-Jx-KxC"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1br-4a-yLr" firstAttribute="top" secondItem="Bie-4t-JxX" secondAttribute="top" constant="245" id="EZ7-6n-evK"/>
-                            <constraint firstItem="1br-4a-yLr" firstAttribute="centerX" secondItem="Bie-4t-JxX" secondAttribute="centerX" type="default" id="h0c-vc-1lP"/>
+                            <constraint firstItem="AvH-10-qoP" firstAttribute="top" secondItem="6WZ-dF-l2D" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1iJ-u8-zpn"/>
+                            <constraint firstItem="rbi-mm-rjT" firstAttribute="leading" secondItem="Bie-4t-JxX" secondAttribute="leading" type="default" id="1jM-sf-e9b"/>
+                            <constraint firstItem="rbi-mm-rjT" firstAttribute="bottom" secondItem="Bie-4t-JxX" secondAttribute="bottom" type="default" id="67G-NM-odp"/>
+                            <constraint firstItem="6WZ-dF-l2D" firstAttribute="centerX" secondItem="AvH-10-qoP" secondAttribute="centerX" type="default" id="Jv5-Ku-RAx"/>
+                            <constraint firstItem="AvH-10-qoP" firstAttribute="centerX" secondItem="1br-4a-yLr" secondAttribute="centerX" type="default" id="UvP-g3-1th"/>
+                            <constraint firstItem="6WZ-dF-l2D" firstAttribute="top" secondItem="Bie-4t-JxX" secondAttribute="top" constant="136" id="Zuf-xo-ln6"/>
+                            <constraint firstItem="rbi-mm-rjT" firstAttribute="trailing" secondItem="Bie-4t-JxX" secondAttribute="trailing" type="default" id="dnG-Z2-sWv"/>
+                            <constraint firstItem="1br-4a-yLr" firstAttribute="centerX" secondItem="rbi-mm-rjT" secondAttribute="centerX" type="default" id="irh-vK-loy"/>
+                            <constraint firstItem="rbi-mm-rjT" firstAttribute="top" secondItem="1br-4a-yLr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qFS-71-fGx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gv1-Nc-Ex6"/>
                     <connections>
+                        <outlet property="connectedDeviceList" destination="rbi-mm-rjT" id="61c-XA-tqj"/>
+                        <outlet property="statusLabel" destination="6WZ-dF-l2D" id="G8t-us-vIN"/>
+                        <outlet property="statusSpinner" destination="AvH-10-qoP" id="xP4-Ei-ZvM"/>
                         <segue destination="2" kind="modal" identifier="connected" modalTransitionStyle="coverVertical" id="e22-Ep-cq2"/>
                     </connections>
                 </viewController>
@@ -140,20 +169,6 @@
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="BLEConnectViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BLEConnectViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="connectPressed:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RobotControlViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RobotControlViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
